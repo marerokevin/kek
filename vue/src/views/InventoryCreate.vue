@@ -133,7 +133,7 @@
             </div>
             <div class="ml-3 text-sm">
               <label for="status" class="font-medium text-gray-700"
-                >Recieved</label
+                >Received</label
               >
             </div>
           </div>
@@ -148,7 +148,7 @@
             <!-- Add new question -->
             <button
               type="button"
-              @click="addItem()"
+              @click="addQuestion()"
               class="flex items-center text-sm py-1 px-4 rounded-sm text-white bg-gray-600 hover:bg-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +174,7 @@
               :question="question"
               :index="index"
               @change="questionChange"
-              @addItem="addItem"
+              @addQuestion="addQuestion"
               @deleteQuestion="deleteQuestion"
             />
           </div>
@@ -251,7 +251,7 @@ function onImageChoose(ev) {
   reader.readAsDataURL(file);
 }
 
-function addItem(index) {
+function addQuestion(index) {
   const newQuestion = {
     id: uuidv4(),
     type: "text",

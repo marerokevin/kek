@@ -6,7 +6,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-gray-700"
     >
       <DashboardCard class="order-1 lg:order-2" style="animation-delay: 0.1s">
-        <template v-slot:title>Total Surveys</template>
+        <template v-slot:title>Pending Request</template>
         <div
           class="text-8xl pb-4 font-semibold flex-1 flex items-center justify-center"
         >
@@ -14,7 +14,7 @@
         </div>
       </DashboardCard>
       <DashboardCard class="order-2 lg:order-4" style="animation-delay: 0.2s">
-        <template v-slot:title>Total Answers</template>
+        <template v-slot:title>Completed Request</template>
         <div
           class="text-8xl pb-4 font-semibold flex-1 flex items-center justify-center"
         >
@@ -69,39 +69,7 @@
           </div>
         </div>
         <div v-else class="text-gray-600 text-center py-16">
-          Your don't have surveys yet
-        </div>
-      </DashboardCard>
-      <DashboardCard class="order-4 lg:order-3 row-span-2" style="animation-delay: 0.3s">
-        <template v-slot:title>
-          <div class="flex justify-between items-center mb-3 px-2">
-            <h3 class="text-2xl font-semibold">Latest Answers</h3>
-
-            <a
-              href="javascript:void(0)"
-              class="text-sm text-blue-500 hover:decoration-blue-500"
-            >
-              View all
-            </a>
-          </div>
-        </template>
-
-        <div v-if="data.latestAnswers.length" class="text-left">
-          <a
-            href="#"
-            v-for="answer of data.latestAnswers"
-            :key="answer.id"
-            class="block p-2 hover:bg-gray-100/90"
-          >
-            <div class="font-semibold">{{ answer.survey.title }}</div>
-            <small>
-              Answer Made at:
-              <i class="font-semibold">{{ answer.end_date }}</i>
-            </small>
-          </a>
-        </div>
-        <div v-else class="text-gray-600 text-center py-16">
-          Your don't have answers yet
+          Your don't have any request yet
         </div>
       </DashboardCard>
     </div>

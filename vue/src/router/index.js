@@ -3,6 +3,7 @@ import Dashboard from "../views/Dashboard.vue";
 import Request from "../views/Request.vue";
 import Inventory from "../views/Inventory.vue";
 import SurveyView from "../views/SurveyView.vue";
+import InventoryCreate from "../views/InventoryCreate.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import NotFound from "../views/NotFound.vue";
@@ -20,9 +21,10 @@ const routes = [
     children: [
       { path: "/dashboard", name: "Dashboard", component: Dashboard },
       { path: "/request", name: "Request", component: Request},
-      { path: "/inventory", name: "Inventory", component: Inventory},
       { path: "/request/create", name: "SurveyCreate", component: SurveyView },
-      { path: "/surveys/:id", name: "SurveyView", component: SurveyView },
+      { path: "/inventory", name: "Inventory", component: Inventory},
+      { path: "/inventory/create", name: "InventoryCreate", component: InventoryCreate},
+      { path: "/inventory/:id", name: "InventoryView", component: Inventory}
     ],
   },
   {
